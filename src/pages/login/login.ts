@@ -14,6 +14,7 @@ export class LoginPage {
   }
 
 login(event: LoginResponse){
+  console.log(event);
   if(!event.error){
     this.toast.create({
       message:'Welcome',
