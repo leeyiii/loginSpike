@@ -30,15 +30,15 @@ var map = {
 		1
 	],
 	"../pages/profile/profile.module": [
-		693,
+		691,
 		3
 	],
 	"../pages/register/register.module": [
-		691,
+		692,
 		0
 	],
 	"../pages/tabs/tabs.module": [
-		692,
+		693,
 		2
 	]
 };
@@ -123,9 +123,30 @@ var AuthService = /** @class */ (function () {
         this.auth = auth;
         console.log('Hello Auth Provider');
     }
-    AuthService.prototype.signInWithEmailAndPassword = function (account) {
+    AuthService.prototype.createUserWithEmailAndPassword = function (account) {
         return __awaiter(this, void 0, void 0, function () {
             var _a, e_1;
+            return __generator(this, function (_b) {
+                switch (_b.label) {
+                    case 0:
+                        _b.trys.push([0, 2, , 3]);
+                        _a = {};
+                        return [4 /*yield*/, this.auth.auth.createUserWithEmailAndPassword(account.email, account.password)];
+                    case 1: return [2 /*return*/, (_a.result = _b.sent(),
+                            _a)];
+                    case 2:
+                        e_1 = _b.sent();
+                        return [2 /*return*/, {
+                                error: e_1
+                            }];
+                    case 3: return [2 /*return*/];
+                }
+            });
+        });
+    };
+    AuthService.prototype.signInWithEmailAndPassword = function (account) {
+        return __awaiter(this, void 0, void 0, function () {
+            var _a, e_2;
             return __generator(this, function (_b) {
                 switch (_b.label) {
                     case 0:
@@ -135,9 +156,9 @@ var AuthService = /** @class */ (function () {
                     case 1: return [2 /*return*/, (_a.result = _b.sent(),
                             _a)];
                     case 2:
-                        e_1 = _b.sent();
+                        e_2 = _b.sent();
                         return [2 /*return*/, {
-                                error: e_1
+                                error: e_2
                             }];
                     case 3: return [2 /*return*/];
                 }
@@ -216,9 +237,9 @@ var AppModule = /** @class */ (function () {
                     links: [
                         { loadChildren: '../pages/inbox/inbox.module#InboxPageModule', name: 'InboxPage', segment: 'inbox', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/profile/profile.module#ProfilePageModule', name: 'ProfilePage', segment: 'profile', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/register/register.module#RegisterPageModule', name: 'RegisterPage', segment: 'register', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/tabs/tabs.module#TabsPageModule', name: 'TabsPage', segment: 'tabs', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/profile/profile.module#ProfilePageModule', name: 'ProfilePage', segment: 'profile', priority: 'low', defaultHistory: [] }
+                        { loadChildren: '../pages/tabs/tabs.module#TabsPageModule', name: 'TabsPage', segment: 'tabs', priority: 'low', defaultHistory: [] }
                     ]
                 }),
                 __WEBPACK_IMPORTED_MODULE_5_angularfire2__["AngularFireModule"].initializeApp(__WEBPACK_IMPORTED_MODULE_8__app_firebase_config__["a" /* FIREBASE_CONFIG */]),

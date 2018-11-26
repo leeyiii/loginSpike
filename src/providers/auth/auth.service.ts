@@ -14,6 +14,23 @@ export class AuthService {
   constructor(private auth: AngularFireAuth) {
     console.log('Hello Auth Provider');
   }
+
+  async createUserWithEmailAndPassword(account){
+    try{
+      return <LoginResponse> {
+        result: await
+        this.auth.auth.createUserWithEmailAndPassword
+        (account.email,account.password)
+      }
+    }
+      catch(e){
+        return <LoginResponse>{
+          error: e
+        }
+      }
+  }
+
+
   async signInWithEmailAndPassword(account: Account){
     try{
       return <LoginResponse>{

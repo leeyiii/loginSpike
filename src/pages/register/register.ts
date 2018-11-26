@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { AngularFireAuth} from 'angularfire2/auth';
-import { Account } from '../../model/account.interface'
-import { ToastController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
+import { LoginResponse } from '../../model/login-response.interface';
 
 /**
  * Generated class for the RegisterPage page.
@@ -18,21 +16,22 @@ import { ToastController } from 'ionic-angular';
 })
 export class RegisterPage {
 
-  account = {} as Account;
+  constructor(public navCtrl: NavController, public navParams: NavParams, private toast: ToastController){
 
-  constructor(private toast: ToastController, private afAuth: AngularFireAuth, public navCtrl: NavController, public navParams: NavParams) {
   }
+  register(event: LoginResponse){
+    if(!event.error){
+      this.toast.create({
+        message: 'Account created',
+        duration:3000
+      }).present();
+    }
+    else {
+      this.toast.create({
+        message: 'Account not created',
+        duration: 3000
+      }).present();
+    }
 
-  async register(){
-    try{
-    const result = await
-      this.afAuth.auth.createUserWithEmailAndPassword(this.account.email, this.account.password);
-      this.toast.create({message: "Success", duration: 3000}).present();
-      console.log(result);
-  }
-  catch(e){
-    console.error(e);
-    this.toast.create({message: e.message, duration: 3000}).present();
-  }
   }
 }

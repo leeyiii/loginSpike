@@ -188,9 +188,7 @@ var LoginFormComponent = /** @class */ (function () {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RegisterFormComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(147);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angularfire2_auth__ = __webpack_require__(148);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_angularfire2_auth___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_angularfire2_auth__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_auth_auth_service__ = __webpack_require__(345);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -237,8 +235,6 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 };
 
 
-
-
 /**
  * Generated class for the RegisterFormComponent component.
  *
@@ -246,12 +242,10 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
  * Components.
  */
 var RegisterFormComponent = /** @class */ (function () {
-    function RegisterFormComponent(toast, afAuth, navCtrl, navParams) {
-        this.toast = toast;
-        this.afAuth = afAuth;
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
+    function RegisterFormComponent(auth) {
+        this.auth = auth;
         this.account = {};
+        this.registerStatus = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* EventEmitter */]();
     }
     RegisterFormComponent.prototype.register = function () {
         return __awaiter(this, void 0, void 0, function () {
@@ -260,27 +254,30 @@ var RegisterFormComponent = /** @class */ (function () {
                 switch (_a.label) {
                     case 0:
                         _a.trys.push([0, 2, , 3]);
-                        return [4 /*yield*/, this.afAuth.auth.createUserWithEmailAndPassword(this.account.email, this.account.password)];
+                        return [4 /*yield*/, this.auth.createUserWithEmailAndPassword(this.account)];
                     case 1:
                         result = _a.sent();
-                        this.toast.create({ message: "Success", duration: 3000 }).present();
-                        console.log(result);
+                        this.registerStatus.emit(result);
                         return [3 /*break*/, 3];
                     case 2:
                         e_1 = _a.sent();
                         console.error(e_1);
-                        this.toast.create({ message: e_1.message, duration: 3000 }).present();
+                        this.registerStatus.emit(e_1);
                         return [3 /*break*/, 3];
                     case 3: return [2 /*return*/];
                 }
             });
         });
     };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["O" /* Output */])(),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* EventEmitter */])
+    ], RegisterFormComponent.prototype, "registerStatus", void 0);
     RegisterFormComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'app-register-form',template:/*ion-inline-start:"/Users/liyi/Documents/SI669/authenticationSpike/src/components/register-form/register-form.component.html"*/'<ion-card>\n  <ion-card-content>\n  <ion-item>\n    <ion-label floating>Email Address</ion-label>\n    <ion-input [(ngModel)]="account.email" type="email"></ion-input>\n  </ion-item>\n\n  <ion-item>\n    <ion-label floating>Password</ion-label>\n    <ion-input [(ngModel)]="account.password" type="password"></ion-input>\n  </ion-item>\n</ion-card-content>\n\n<ion-row>\n  <div>\n  <button ion-button color="secondary" (click)="register()">Register</button>\n  </div>\n</ion-row>\n\n</ion-card>\n'/*ion-inline-end:"/Users/liyi/Documents/SI669/authenticationSpike/src/components/register-form/register-form.component.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* ToastController */], __WEBPACK_IMPORTED_MODULE_2_angularfire2_auth__["AngularFireAuth"], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavParams */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__providers_auth_auth_service__["a" /* AuthService */]])
     ], RegisterFormComponent);
     return RegisterFormComponent;
 }());
