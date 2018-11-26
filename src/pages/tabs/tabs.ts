@@ -22,8 +22,8 @@ export class TabsPage {
   constructor() {
 
   this.tab1Root = 'HomePage';
-  this.tab2Root = 'ProfilePage'; //should change
-  this.tab3Root = 'ProfilePage';
+  this.tab2Root = 'DiaryPage';
+  this.tab3Root = 'ProfilePage'; //to be created
 
   }
 

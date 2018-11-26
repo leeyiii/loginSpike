@@ -20,7 +20,7 @@ login(event: LoginResponse){
       message:'Welcome',
       duration:3000
     }).present();
-    this.navCtrl.setRoot('ProfilePage')
+    this.navCtrl.setRoot('DiaryPage')
   }
   else{
     this.toast.create({
