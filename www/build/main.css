@@ -25674,6 +25674,15 @@ ion-navbar.toolbar {
   min-height: calc(46px + env(safe-area-inset-bottom));
 }
 
+.login-form_buttons {
+  padding: 10px;
+  float: right;
+}
+
+.login-form_buttons div button:nth-of-type(1) {
+  margin-right: 10px;
+}
+
 ion-card ion-row {
   padding: 10px;
   float: right;

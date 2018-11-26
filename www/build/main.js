@@ -1,4 +1,4 @@
-webpackJsonp([6],{
+webpackJsonp([5],{
 
 /***/ 158:
 /***/ (function(module, exports) {
@@ -21,29 +21,25 @@ webpackEmptyAsyncContext.id = 158;
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"../pages/channels/channels.module": [
-		688,
-		5
-	],
 	"../pages/inbox/inbox.module": [
-		689,
+		688,
 		4
 	],
 	"../pages/login/login.module": [
-		690,
-		3
+		689,
+		1
 	],
 	"../pages/profile/profile.module": [
 		691,
-		2
+		3
 	],
 	"../pages/register/register.module": [
-		692,
-		1
+		690,
+		0
 	],
 	"../pages/tabs/tabs.module": [
-		693,
-		0
+		692,
+		2
 	]
 };
 function webpackAsyncContext(req) {
@@ -119,11 +115,10 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
                 __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_7__app_component__["a" /* MyApp */], {}, {
                     links: [
-                        { loadChildren: '../pages/channels/channels.module#ChannelsPageModule', name: 'ChannelsPage', segment: 'channels', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/inbox/inbox.module#InboxPageModule', name: 'InboxPage', segment: 'inbox', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/profile/profile.module#ProfilePageModule', name: 'ProfilePage', segment: 'profile', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/register/register.module#RegisterPageModule', name: 'RegisterPage', segment: 'register', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/profile/profile.module#ProfilePageModule', name: 'ProfilePage', segment: 'profile', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/tabs/tabs.module#TabsPageModule', name: 'TabsPage', segment: 'tabs', priority: 'low', defaultHistory: [] }
                     ]
                 }),
