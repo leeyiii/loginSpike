@@ -1,6 +1,6 @@
 webpackJsonp([1],{
 
-/***/ 690:
+/***/ 689:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,7 +8,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoginPageModule", function() { return LoginPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(147);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__login__ = __webpack_require__(698);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__login__ = __webpack_require__(697);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_components_module__ = __webpack_require__(694);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -171,7 +171,7 @@ var LoginFormComponent = /** @class */ (function () {
     ], LoginFormComponent.prototype, "loginStatus", void 0);
     LoginFormComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'app-login-form',template:/*ion-inline-start:"/Users/liyi/Documents/SI669/authenticationSpike/src/components/login-form/login-form.component.html"*/'\n\n<ion-card>\n  <ion-card-content>\n  <ion-item>\n    <ion-label floating>Email Address</ion-label>\n    <ion-input [(ngModel)]="account.email" type="email"></ion-input>\n  </ion-item>\n\n  <ion-item>\n    <ion-label floating>Password</ion-label>\n    <ion-input [(ngModel)]="account.password" type="password"></ion-input>\n  </ion-item>\n</ion-card-content>\n\n<ion-row class="login-form_buttons">\n  <div>\n  <button ion-button color="secondary" (click)="navigateToRegisterPage()">Register</button>\n    <button ion-button color="primary" (click)="login()">Login</button>\n  </div>\n</ion-row>\n\n</ion-card>\n'/*ion-inline-end:"/Users/liyi/Documents/SI669/authenticationSpike/src/components/login-form/login-form.component.html"*/
+            selector: 'app-login-form',template:/*ion-inline-start:"/Users/liyi/Documents/SI669/authenticationSpike/src/components/login-form/login-form.component.html"*/'\n\n<ion-card>\n  <ion-card-content>\n  <ion-item>\n    <ion-label floating>Diary ID</ion-label>\n    <ion-input [(ngModel)]="account.email" type="email"></ion-input>\n  </ion-item>\n\n  <ion-item>\n    <ion-label floating>Password</ion-label>\n    <ion-input [(ngModel)]="account.password" type="password"></ion-input>\n  </ion-item>\n</ion-card-content>\n\n<ion-row class="login-form_buttons">\n  <div>\n  <button ion-button color="secondary" (click)="navigateToRegisterPage()">Register</button>\n    <button ion-button color="primary" (click)="login()">Login</button>\n  </div>\n</ion-row>\n\n</ion-card>\n'/*ion-inline-end:"/Users/liyi/Documents/SI669/authenticationSpike/src/components/login-form/login-form.component.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__providers_auth_auth_service__["a" /* AuthService */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]])
     ], LoginFormComponent);
@@ -275,7 +275,7 @@ var RegisterFormComponent = /** @class */ (function () {
     ], RegisterFormComponent.prototype, "registerStatus", void 0);
     RegisterFormComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'app-register-form',template:/*ion-inline-start:"/Users/liyi/Documents/SI669/authenticationSpike/src/components/register-form/register-form.component.html"*/'<ion-card>\n  <ion-card-content>\n  <ion-item>\n    <ion-label floating>Email Address</ion-label>\n    <ion-input [(ngModel)]="account.email" type="email"></ion-input>\n  </ion-item>\n\n  <ion-item>\n    <ion-label floating>Password</ion-label>\n    <ion-input [(ngModel)]="account.password" type="password"></ion-input>\n  </ion-item>\n</ion-card-content>\n\n<ion-row>\n  <div>\n  <button ion-button color="secondary" (click)="register()">Register</button>\n  </div>\n</ion-row>\n\n</ion-card>\n'/*ion-inline-end:"/Users/liyi/Documents/SI669/authenticationSpike/src/components/register-form/register-form.component.html"*/
+            selector: 'app-register-form',template:/*ion-inline-start:"/Users/liyi/Documents/SI669/authenticationSpike/src/components/register-form/register-form.component.html"*/'<ion-card>\n  <ion-card-content>\n  <ion-item>\n    <ion-label floating>Diary ID</ion-label>\n    <ion-input [(ngModel)]="account.email" type="email"></ion-input>\n  </ion-item>\n\n  <ion-item>\n    <ion-label floating>Password</ion-label>\n    <ion-input [(ngModel)]="account.password" type="password"></ion-input>\n  </ion-item>\n</ion-card-content>\n\n<ion-row>\n  <div>\n  <button ion-button color="secondary" (click)="register()">Register</button>\n  </div>\n</ion-row>\n\n</ion-card>\n'/*ion-inline-end:"/Users/liyi/Documents/SI669/authenticationSpike/src/components/register-form/register-form.component.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__providers_auth_auth_service__["a" /* AuthService */]])
     ], RegisterFormComponent);
@@ -286,7 +286,7 @@ var RegisterFormComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 698:
+/***/ 697:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
